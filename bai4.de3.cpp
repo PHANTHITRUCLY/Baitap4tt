@@ -9,6 +9,12 @@ using namespace std;
 fstream fi;
 	int n;
 
+struct cap{
+	int dinh;
+	int tong;
+};
+
+
 //doc file
 void Docfile(int a[10][10]){
 	fi.open("Matran.txt", ios::in);
@@ -20,7 +26,7 @@ void Docfile(int a[10][10]){
 	fi.close();
 }
 
-void Xuatdothi( int a[10][10]){
+void Xuatdothi( int a[10][10],int n){
 	
 	for(int i=0; i<n; i++){
 		for(int j=0; j<n; j++)
@@ -31,7 +37,7 @@ void Xuatdothi( int a[10][10]){
 void Taomoi(int a[10][10], int &n){
 	
 	cout<<"\nNhap n: "; cin>>n;
-	fi.open("Matran.txt",ios::out);
+	fi.open("Matranmoi.txt",ios::out);
 	fi<<n<<endl;
 	for(int i=0; i<n; i++){
 	  for(int j=0; j<n; j++){
@@ -45,6 +51,7 @@ void Taomoi(int a[10][10], int &n){
 
 	}
 }
+/* */
 
 
 
@@ -54,6 +61,6 @@ int main(){
 //	Docfile(a);
 //	Xuatdothi(a);
 	Taomoi(a,n);
-	Xuatdothi(a);
+	Xuatdothi(a,n);
 	getch();
 }
