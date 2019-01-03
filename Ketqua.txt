@@ -1,0 +1,3 @@
+
+Khoang cach tu dinh 4 toi dinh 2 = 2
+ Duong di : 2 <- 4
